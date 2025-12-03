@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -26,7 +25,63 @@
     .how{margin-top:36px;background:rgba(255,255,255,0.01);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);}
     .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px;}
     footer{margin-top:40px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.02);display:flex;justify-content:space-between;align-items:center;color:var(--muted);}
-    @media(max-width:900px){.hero{flex-direction:column}.services{grid-template-columns:1fr}.case-grid{grid-template-columns:1fr}header{flex-direction:column;align-items:flex-start}.logo{height:54px;width:54px}}
+    @media(max-width:900px){
+      .hero{flex-direction:column}
+      .services{grid-template-columns:1fr}
+      .case-grid{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start}
+      .logo{height:54px;width:54px}
+    }
+    /* ------------ MOBILE FIX FOR OVERLAP ------------ */
+    @media (max-width: 768px) {
+
+      /* Stack buttons vertically so they don't collide */
+      .cta {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+      }
+
+      .cta .btn,
+      .cta .ghost {
+        width: 100%;
+        text-align: center;
+        margin-left: 0 !important;
+      }
+
+      /* Fix "Our Services" link overlap */
+      #services {
+        margin-top: 40px;
+      }
+
+      /* Prevent big title from pushing things */
+      h2.title {
+        font-size: 26px;
+        line-height: 1.2;
+      }
+
+      /* Stack header items nicely */
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      /* Make hero layout stack smoothly */
+      .hero {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+      }
+
+      .hero-right {
+        display: flex;
+        justify-content: center;
+      }
+
+    }
+
   </style>
 </head>
 <body>
@@ -45,10 +100,10 @@
     <main>
       <div class="hero">
         <div class="hero-left">
-          <h2 class="title">Physics‑driven generative design & AI for mechanical systems</h2>
-          <p class="lead">MechAIQ helps engineering teams and manufacturers shrink design cycles, remove guesswork, and deliver failure‑free products using physics‑grade simulation, advanced vibration analysis, predictive maintenance solutions and AI‑powered automation.</p>
+          <h2 class="title">Physics-driven generative design & AI for mechanical systems</h2>
+          <p class="lead">MechAIQ helps engineering teams and manufacturers shrink design cycles, remove guesswork, and deliver failure-free products using physics-grade simulation, advanced vibration analysis, predictive maintenance solutions and AI-powered automation.</p>
           <div class="cta">
-            <a href="#contact" class="btn">Book a 15‑min Consultation</a>
+            <a href="#contact" class="btn">Book a 15-min Consultation</a>
             <a href="#services" class="ghost">Our Services</a>
           </div>
         </div>
@@ -60,15 +115,15 @@
       <section id="services" class="services" aria-label="services">
         <div class="card">
           <h3>Smart Design Review</h3>
-          <p>Physics‑backed design audits: quick CAE checks, torsional & modal reviews, and actionable fixes before prototyping.</p>
+          <p>Physics-backed design audits: quick CAE checks, torsional & modal reviews, and actionable fixes before prototyping.</p>
         </div>
         <div class="card">
           <h3>Generative Design Engine</h3>
-          <p>AI‑driven topology optimization that meets stress, NVH and manufacturability constraints — exportable to CAD.</p>
+          <p>AI-driven topology optimization that meets stress, NVH and manufacturability constraints — exportable to CAD.</p>
         </div>
         <div class="card">
           <h3>Predictive Maintenance & Diagnostics</h3>
-          <p>Vibration analytics, gear‑fault detection, condition monitoring models and alert systems for real equipment using AI.</p>
+          <p>Vibration analytics, gear-fault detection, condition monitoring models and alert systems for real equipment using AI.</p>
         </div>
         <div class="card">
           <h3>Simulation–Test Correlation</h3>
@@ -88,10 +143,10 @@
         <h3>How we engage</h3>
         <ol>
           <li><strong>Discovery (1 week)</strong> — problem scoping, data & CAD intake, KPI setting.</li>
-          <li><strong>Prototype (2–6 weeks)</strong> — fast CAE checks, ML proof‑of‑concept, generative design demo.</li>
+          <li><strong>Prototype (2–6 weeks)</strong> — fast CAE checks, ML proof-of-concept, generative design demo.</li>
           <li><strong>Deliver (2–8 weeks)</strong> — deployable models, automation scripts, training & handover.</li>
         </ol>
-        <p style="margin-top:12px;color:var(--muted)">Pricing models: one‑time project, monthly retainer, or product licensing for generative engines.</p>
+        <p style="margin-top:12px;color:var(--muted)">Pricing models: one-time project, monthly retainer, or product licensing for generative engines.</p>
       </section>
 
       <section class="case-studies">
@@ -99,7 +154,7 @@
         <div class="case-grid">
           <div class="card">
             <h4>Gear Fault Detection (Convolutional Neural Networks)</h4>
-            <p>Modelled vibration signatures to detect gear faults; accuracy &gt; 90% and real‑time alerts on production lines.</p>
+            <p>Modelled vibration signatures to detect gear faults; accuracy &gt; 90% and real-time alerts on production lines.</p>
           </div>
           <div class="card">
             <h4>Torsional Vibration Analysis</h4>
@@ -114,8 +169,16 @@
 
       <section id="contact" style="margin-top:28px;">
         <h3>Contact & Next steps</h3>
-        <p style="color:var(--muted)">Book a free 15‑minute consultation. We'll review your CAD, outline quick wins, and propose a tailored roadmap.</p>
-        <p style="margin:6px 0;"><strong>Email:</strong> <a href="mailto:hello_mechaiq@outlook.com" style="color:var(--accent); text-decoration-thickness:1.5px; text-underline-offset:3px;">hello_mechaiq@outlook.com</a> &nbsp; <!--<strong>Phone:</strong> +91‑XXXXXXXXXX--></p>
+        <p style="color:var(--muted)">Book a free 15-minute consultation. We'll review your CAD, outline quick wins, and propose a tailored roadmap.</p>
+
+        <p style="margin:6px 0;">
+          <strong>Email:</strong>  
+          <a href="mailto:hello_mechaiq@outlook.com"
+             style="color:var(--accent); text-decoration-thickness:2px; text-underline-offset:4px;">
+             hello_mechaiq@outlook.com
+          </a>
+        </p>
+
         <p style="margin-top:6px;color:var(--muted)">Or paste your problem into a short form and we'll reply within 24hrs.</p>
         <a class="btn" href="mailto:hello_mechaiq@outlook.com?subject=MechAIQ%20Consultation">Book Consultation</a>
       </section>
@@ -126,11 +189,15 @@
       <div>Designed by MechAIQ — Engineering Intelligence</div>
     </footer>
   </div>
+
   <script>
-    // smooth scroll for anchors
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});});});
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      });
+    });
   </script>
+
 </body>
 </html>
-
-
