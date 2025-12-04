@@ -1,0 +1,245 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Adding Title + SEO Meta Description (Very Important) -->
+  <title>MechAIQ — Engineering Intelligence for Mechanical Systems</title>
+  <meta name="description" content="MechAIQ provides AI-driven mechanical engineering solutions: NVH, vibration analysis, FEA automation, digital twins, predictive maintenance, generative design, and mechanical performance consulting.">
+  <!-- Adding Canonical Tag. Helps Google know the main URL. -->
+  <link rel="canonical" href="https://mechaiq.in/">
+  <!-- Adding Open Graph + Twitter Preview (for LinkedIn sharing) -->
+  <meta property="og:title" content="MechAIQ – Engineering Intelligence for Mechanical Systems">
+  <meta property="og:description" content="AI + Mechanical Engineering consulting for NVH, vibrations, design, optimization, and system intelligence.">
+  <meta property="og:image" content="https://mechaiq.in//logo.png">
+  <meta property="og:url" content="https://mechaiq.in/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Cache Control (helps with performance) -->
+  <meta http-equiv="Cache-Control" content="max-age=31536000, immutable">
+
+  <!-- Google Analytics (Important for tracking visitors) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Adding JSON-LD (Google Structured Data) -->
+  <!-- This helps Google understand your business. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "MechAIQ",
+    "url": "https://mechaiq.in/",
+    "logo": "https://mechaiq.in/logo.png",
+    "description": "AI-powered mechanical engineering consulting for vibrations, NVH, digital twins, predictive maintenance, CAD automation, and mechanical system intelligence.",
+    "email": "hello_mechaiq@outlook.com"
+  }
+  </script>
+  <!-- Preload your logo (makes it load fast) -->
+  <link rel="preload" as="image" href="logo.png">
+
+  <style>
+    :root{--accent:#00E0FF; --dark:#0F1115; --muted:#6b7280; --bg:#0b0c0f;}
+    body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#07080a 0%, #0b0c0f 100%);color:#e6eef6;-webkit-font-smoothing:antialiased;}
+    .container{max-width:1100px;margin:40px auto;padding:24px;}
+    header{display:flex;align-items:center;gap:18px;}
+    .logo{height:64px;width:64px;border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:8px;}
+    .brand h1{margin:0;font-size:20px;letter-spacing:0.6px;}
+    .brand p{margin:0;color:var(--muted);font-size:13px;}
+    .hero{display:flex;gap:40px;align-items:center;margin-top:36px;}
+    .hero-left{flex:1} .hero-right{flex:1;display:flex;justify-content:center;}
+    h2.title{font-size:34px;margin:0 0 12px 0;line-height:1.05;}
+    p.lead{color:#cfd9e6;line-height:1.6;max-width:680px;}
+    .cta{margin-top:18px;}
+    .btn{background:var(--accent);color:#04121a;padding:12px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer;text-decoration:none;}
+    .ghost{background:transparent;border:1px solid rgba(224,224,224,0.06);color:var(--accent);padding:10px 14px;border-radius:10px;text-decoration:none;margin-left:12px;}
+    section.services{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);}
+    .card h3{margin:0 0 8px 0;} .card p{margin:0;color:var(--muted);font-size:14px;}
+    .how{margin-top:36px;background:rgba(255,255,255,0.01);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);}
+    .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px;}
+    footer{margin-top:40px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.02);display:flex;justify-content:space-between;align-items:center;color:var(--muted);}
+    @media(max-width:900px){
+      .hero{flex-direction:column}
+      .services{grid-template-columns:1fr}
+      .case-grid{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start}
+      .logo{height:54px;width:54px}
+    }
+    /* ------------ MOBILE FIX FOR OVERLAP ------------ */
+    @media (max-width: 768px) {
+
+      /* Stack buttons vertically so they don't collide */
+      .cta {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+      }
+
+      .cta .btn,
+      .cta .ghost {
+        width: 100%;
+        text-align: center;
+        margin-left: 0 !important;
+      }
+
+      /* Fix "Our Services" link overlap */
+      #services {
+        margin-top: 40px;
+      }
+
+      /* Prevent big title from pushing things */
+      h2.title {
+        font-size: 26px;
+        line-height: 1.2;
+      }
+
+      /* Stack header items nicely */
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      /* Make hero layout stack smoothly */
+      .hero {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+      }
+
+      .hero-right {
+        display: flex;
+        justify-content: center;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo"><img src="logo.png" alt="MechAIQ logo" style="height:100%;width:auto;"></div>
+      <div class="brand">
+        <h1>MechAIQ</h1>
+        <p>Engineering Intelligence — Generative design, Simulation & AI for mechanical systems</p>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <a href="#contact" class="ghost">Book a consult</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="hero-left">
+          <h2 class="title">Physics-driven generative design & AI for mechanical systems</h2>
+          <p class="lead">MechAIQ helps engineering teams and manufacturers shrink design cycles, remove guesswork, and deliver failure-free products using physics-grade simulation, advanced vibration analysis, predictive maintenance solutions and AI-powered automation.</p>
+          <div class="cta">
+            <a href="#contact" aria-label="Book a 15-minute consultation" class="btn">Book a 15-min Consultation</a>
+            <a href="#services" class="ghost">Our Services</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <img src="logo.png" alt="MechAIQ mark" style="max-width:320px;opacity:0.98">
+        </div>
+      </div>
+
+      <section id="services" class="services" aria-label="services">
+        <div class="card">
+          <h3>Smart Design Review</h3>
+          <p>Physics-backed design audits: quick CAE checks, torsional & modal reviews, and actionable fixes before prototyping.</p>
+        </div>
+        <div class="card">
+          <h3>Generative Design Engine</h3>
+          <p>AI-driven topology optimization that meets stress, NVH and manufacturability constraints — exportable to CAD.</p>
+        </div>
+        <div class="card">
+          <h3>Predictive Maintenance & Diagnostics</h3>
+          <p>Vibration analytics, gear-fault detection, condition monitoring models and alert systems for real equipment using AI.</p>
+        </div>
+        <div class="card">
+          <h3>Simulation–Test Correlation</h3>
+          <p>Siamese neural networks & ML pipelines that align simulation outputs with field test data — reduce redesign cycles.</p>
+        </div>
+        <div class="card">
+          <h3>Design Automation Workflows</h3>
+          <p>CAD scripting, meshing automation, batch simulations and deployable ML scripts to speed engineering throughput.</p>
+        </div>
+        <div class="card">
+          <h3>Custom ML & Tooling</h3>
+          <p>From neural network based fault detection systems to building similarity models for test correlation projects and machine's proactive analysis — deployable as APIs or apps.</p>
+        </div>
+      </section>
+
+      <section class="how">
+        <h3>How we engage</h3>
+        <ol>
+          <li><strong>Discovery (1 week)</strong> — problem scoping, data & CAD intake, KPI setting.</li>
+          <li><strong>Prototype (2–6 weeks)</strong> — fast CAE checks, ML proof-of-concept, generative design demo.</li>
+          <li><strong>Deliver (2–8 weeks)</strong> — deployable models, automation scripts, training & handover.</li>
+        </ol>
+        <p style="margin-top:12px;color:var(--muted)">Pricing models: one-time project, monthly retainer, or product licensing for generative engines.</p>
+      </section>
+
+      <section class="case-studies">
+        <h3 style="margin-top:28px">Case studies</h3>
+        <div class="case-grid">
+          <div class="card">
+            <h4>Gear Fault Detection (Convolutional Neural Networks)</h4>
+            <p>Modelled vibration signatures to detect gear faults; accuracy &gt; 90% and real-time alerts on production lines.</p>
+          </div>
+          <div class="card">
+            <h4>Torsional Vibration Analysis</h4>
+            <p>Vibration analysis and harmonic balancing study for rotating systems — reduced peak torsional stress significantly.</p>
+          </div>
+          <div class="card">
+            <h4>Simulation–Test Correlation</h4>
+            <p>Siamese neural network mapping improved correlation between dynamic simulations and test readings — reducing physical testing & saving money.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:28px;">
+        <h3>Contact & Next steps</h3>
+        <p style="color:var(--muted)">Book a free 15-minute consultation. We'll review your CAD, outline quick wins, and propose a tailored roadmap.</p>
+
+        <p style="margin:6px 0;">
+          <strong>Email:</strong>  
+          <a href="mailto:hello_mechaiq@outlook.com"
+             style="color:var(--accent); text-decoration-thickness:2px; text-underline-offset:4px;">
+             hello_mechaiq@outlook.com
+          </a>
+        </p>
+
+        <p style="margin-top:6px;color:var(--muted)">Or paste your problem into a short form and we'll reply within 24hrs.</p>
+        <a class="btn" href="mailto:hello_mechaiq@outlook.com?subject=MechAIQ%20Consultation">Book Consultation</a>
+      </section>
+    </main>
+
+    <footer>
+      <div>© 2025 MechAIQ</div>
+      <div>Designed by MechAIQ — Engineering Intelligence for Mechanical Systems</div>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      });
+    });
+  </script>
+
+</body>
+</html>
