@@ -1,24 +1,25 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <!-- Adding Title + SEO Meta Description (Very Important) -->
-  <title>MechAIQ — Engineering Intelligence for Mechanical Systems</title>
+  <!-- Adding Title + SEO Meta Description -->
+  <title>MechAIQ — AI-Powered Engineering Intelligence for Industrial Machine Health Reliability</title>
+
   <!-- FAbicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="shortcut icon" href="favicon.ico">
-  <meta name="description" content="MechAIQ provides AI-driven mechanical engineering solutions: Design & Product Development, FEA automation, Digital twins, Machine Prognosis & Health Monitoring and Machine performance consulting.">
+  <meta name="description" content="MechAIQ delivers AI-powered predictive health monitoring systems for industrial machinery — providing machine diagnosis through vibration-based fault detection and anomaly analysis, and machine prognosis through remaining useful life estimation and maintenance insights.">
   <!-- Adding Canonical Tag. Helps Google know the main URL. -->
   <link rel="canonical" href="https://mechaiq.in/">
   <!-- Adding Open Graph + Twitter Preview (for LinkedIn sharing) -->
-  <meta property="og:title" content="MechAIQ – Engineering Intelligence for Mechanical Systems">
-  <meta property="og:description" content="AI + Mechanical Engineering consulting for Design, Optimization, and Machine Prognosis & Health Monitoring.">
-  <meta property="og:image" content="https://mechaiq.in//logo.png">
+
+  <meta property="og:title" content="MechAIQ — AI-Powered Engineering Intelligence for Industrial Machine Health Reliability">
+  <meta property="og:description" content="AI-powered industrial machine diagnostics and prognostics platform.">
+  <meta property="og:image" content="https://mechaiq.in/logo.png">
   <meta property="og:url" content="https://mechaiq.in/">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -43,7 +44,7 @@
     "name": "MechAIQ",
     "url": "https://mechaiq.in/",
     "logo": "https://mechaiq.in/logo.png",
-    "description": "AI-powered mechanical engineering consulting for Design & Product Development, FEA automation, Digital twins, Machine Prognosis & Health Monitoring and Machine performance consulting.",
+    "description": "AI-Powered Engineering Intelligence for Predictive Health Monitoring of Industrial Machinery",
     "email": "hello_mechaiq@outlook.com"
   }
   </script>
@@ -51,211 +52,178 @@
   <link rel="preload" as="image" href="logo.png">
 
   <style>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;}
     :root{--accent:#00E0FF; --dark:#0F1115; --muted:#6b7280; --bg:#0b0c0f;}
-    body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#07080a 0%, #0b0c0f 100%);color:#e6eef6;-webkit-font-smoothing:antialiased;}
+    body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#07080a 0%, #0b0c0f 100%);color:#e6eef6;}
     .container{max-width:1100px;margin:40px auto;padding:24px;}
     header{display:flex;align-items:center;gap:18px;}
-    .logo{height:64px;width:64px;border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:8px;}
-    .brand h1{margin:0;font-size:20px;letter-spacing:0.6px;}
+    .logo{height:64px;width:64px;}
+    .brand h1{margin:0;font-size:20px;}
     .brand p{margin:0;color:var(--muted);font-size:13px;}
     .hero{display:flex;gap:40px;align-items:center;margin-top:36px;}
-    .hero-left{flex:1} .hero-right{flex:1;display:flex;justify-content:center;}
+    .hero-left{flex:1}
+    .hero-right{flex:1;display:flex;justify-content:center;}
     h2.title{font-size:34px;margin:0 0 12px 0;line-height:1.05;}
-    p.lead{color:#cfd9e6;line-height:1.6;max-width:680px;}
+    p.lead{color:#cfd9e6;line-height:1.6;}
     .cta{margin-top:18px;}
-    .btn{background:var(--accent);color:#04121a;padding:12px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer;text-decoration:none;}
+    .btn{background:var(--accent);color:#04121a;padding:12px 18px;border-radius:10px;border:0;font-weight:700;text-decoration:none;}
     .ghost{background:transparent;border:1px solid rgba(224,224,224,0.06);color:var(--accent);padding:10px 14px;border-radius:10px;text-decoration:none;margin-left:12px;}
     section.services{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
     .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);}
-    .card h3{margin:0 0 8px 0;} .card p{margin:0;color:var(--muted);font-size:14px;}
-    .how{margin-top:36px;background:rgba(255,255,255,0.01);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);}
-    .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px;}
-    footer{margin-top:40px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.02);display:flex;justify-content:space-between;align-items:center;color:var(--muted);}
+    .card h3{margin:0 0 8px 0;}
+    .card p{margin:0;color:var(--muted);font-size:14px;}
+    footer{margin-top:40px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.02);display:flex;justify-content:space-between;color:var(--muted);}
     @media(max-width:900px){
       .hero{flex-direction:column}
       .services{grid-template-columns:1fr}
-      .case-grid{grid-template-columns:1fr}
-      header{flex-direction:column;align-items:flex-start}
-      .logo{height:54px;width:54px}
     }
-    /* ------------ MOBILE FIX FOR OVERLAP ------------ */
-    @media (max-width: 768px) {
-
-      /* Stack buttons vertically so they don't collide */
-      .cta {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        align-items: stretch;
-      }
-
-      .cta .btn,
-      .cta .ghost {
-        width: 100%;
-        text-align: center;
-        margin-left: 0 !important;
-      }
-
-      /* Fix "Our Services" link overlap */
-      #services {
-        margin-top: 40px;
-      }
-
-      /* Prevent big title from pushing things */
-      h2.title {
-        font-size: 26px;
-        line-height: 1.2;
-      }
-
-      /* Stack header items nicely */
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-      }
-
-      /* Make hero layout stack smoothly */
-      .hero {
-        flex-direction: column;
-        gap: 24px;
-        text-align: center;
-      }
-
-      .hero-right {
-        display: flex;
-        justify-content: center;
-      }
-
-    }
-
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <div class="logo"><img src="logo.png" alt="MechAIQ logo" style="height:100%;width:auto;"></div>
-      <div class="brand">
-        <h1>MechAIQ</h1>
-        <p>Engineering Intelligence — Generative design, Simulation & AI for mechanical systems</p>
-      </div>
-      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
-        <a href="#contact" class="ghost">Book a consult</a>
-      </div>
-    </header>
+<div class="container">
 
-    <main>
-      <div class="hero">
-        <div class="hero-left">
-          <h2 class="title">Physics-driven generative design & AI for mechanical systems</h2>
-          <p class="lead">MechAIQ helps engineering teams and manufacturers shrink design cycles, remove guesswork, and deliver failure-free products using physics-grade simulation, advanced vibration analysis, proactive maintenance solutions and AI-powered automation.</p>
-          <div class="cta">
-            <a href="#contact" aria-label="Book a 15-minute consultation" class="btn">Book a 15-min Consultation</a>
-            <a href="#services" class="ghost">Our Services</a>
-          </div>
-        </div>
-        <div class="hero-right">
-          <img src="logo.png" alt="MechAIQ mark" style="max-width:320px;opacity:0.98">
-        </div>
-      </div>
-      
-      <section class="founder-note" style="margin-top:40px;padding:22px;background:rgba(255,255,255,0.02);border-radius:12px;border:1px solid rgba(255,255,255,0.03);">
-        <h3 style="margin-top:0;">Founder’s Note</h3>
-        <p style="color:#cfd9e6;line-height:1.6;max-width:820px;">
-          MechAIQ was founded to bridge classical mechanical engineering and modern AI —
-          building systems that don’t just analyze data, but understand physics.
-        </p>
-      </section>
+<header>
+  <div class="logo"><img src="logo.png" alt="MechAIQ logo" style="height:100%;width:auto;"></div>
+  <div class="brand">
+    <h1>MechAIQ</h1>
+    <p>AI-Powered Engineering Intelligence for Industrial Machine Health Reliability</p>
+  </div>
+</header>
 
-      <section id="services" class="services" aria-label="services">
-        <div class="card">
-          <h3>Smart Design & Review</h3>
-          <p>Physics-backed design & audits: From concept to manufacturable CAD with strong focus on real-world performance.</p>
-        </div>
-        <div class="card">
-          <h3>Generative Design Engine</h3>
-          <p>AI-driven topology optimization that meets manufacturability constraints — exportable to CAD.</p>
-        </div>
-        <div class="card">
-          <h3>Machine Prognosis & Diagnostics</h3>
-          <p>Real time machine condition monitoring models depicting diagnosis prognosis and remaining useful life.</p>
-        </div>
-        <div class="card">
-          <h3>Simulation–Test Correlation</h3>
-          <p>Siamese neural networks & ML pipelines that align simulation outputs with field test data — reduce redesign cycles.</p>
-        </div>
-        <div class="card">
-          <h3>Design Automation Workflows</h3>
-          <p>CAD scripting, meshing automation, batch simulations and deployable ML scripts to speed engineering throughput.</p>
-        </div>
-        <div class="card">
-          <h3>Custom ML & Tooling</h3>
-          <p>From neural network based fault detection systems to building similarity models for test correlation projects and machine's proactive analysis — deployable as APIs or apps.</p>
-        </div>
-      </section>
+<main>
 
-      <section class="how">
-        <h3>How we engage</h3>
-        <ol>
-          <li><strong>Discovery (1 week)</strong> — problem scoping, data & CAD intake, KPI setting.</li>
-          <li><strong>Prototype (2–6 weeks)</strong> — fast CAE checks, ML proof-of-concept, generative design demo.</li>
-          <li><strong>Deliver (2–8 weeks)</strong> — deployable models, automation scripts, training & handover.</li>
-        </ol>
-        <p style="margin-top:12px;color:var(--muted)">Pricing models: one-time project, monthly retainer, or product licensing for generative engines.</p>
-      </section>
+<div class="hero">
+  <div class="hero-left">
+    <h2 class="title">AI-powered Diagnostics and Prognostics for Industrial Machine Health</h2>
+    <p class="lead">
+      MechAIQ builds intelligent machine health monitoring systems that combine vibration sensing, AI-driven diagnostics, and prognostics to predict failures before breakdown occurs — helping industries significantly reduce downtime, maintenance costs, and operational losses.
+    </p>
+    <div class="cta">
+      <a href="#contact" class="btn">Book a Demo</a>
+      <a href="#services" class="ghost">Explore Platform</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="logo.png" alt="MechAIQ mark" style="max-width:320px;">
+  </div>
+</div>
 
-      <section class="case-studies">
-        <h3 style="margin-top:28px">Case studies</h3>
-        <div class="case-grid">
-          <div class="card">
-            <h4>Deployable Fault Detection Engine</h4>
-            <p>Modelled vibration signatures to detect gear faults; accuracy &gt; 90% and real-time alerts on production lines.</p>
-          </div>
-          <div class="card">
-            <h4>Torsional Risk Engine</h4>
-            <p>Vibration analysis and harmonic balancing study for rotating systems — reduced peak torsional stress significantly.</p>
-          </div>
-          <div class="card">
-            <h4>Simulation–Test Correlation Engine</h4>
-            <p>Physics-aware correlation engine that aligns simulation outputs with real-world test data — improving model confidence, reducing over-testing, and accelerating product validation cycles.</p>
-          </div>
-        </div>
-      </section>
+<section class="founder-note" style="margin-top:40px;padding:22px;background:rgba(255,255,255,0.02);border-radius:12px;">
+  <h3>Our Vision</h3>
+  <p style="color:#cfd9e6;line-height:1.6;">
+    We are building the next generation of industrial intelligence systems that transform raw machine performance data into actionable diagnostics, prognostics, and maintenance decisions.
+  </p>
+</section>
 
-      <section id="contact" style="margin-top:28px;">
-        <h3>Contact & Next steps</h3>
-        <p style="color:var(--muted)">Book a free 15-minute consultation. We'll review your CAD, outline quick wins, and propose a tailored roadmap.</p>
+<section id="services" class="services">
 
-        <p style="margin:6px 0;">
-          <strong>Email:</strong>  
-          <a href="mailto:hello_mechaiq@outlook.com"
-             style="color:var(--accent); text-decoration-thickness:2px; text-underline-offset:4px;">
-             hello_mechaiq@outlook.com
-          </a>
-        </p>
-
-        <p style="margin-top:6px;color:var(--muted)">Or paste your problem into a short form and we'll reply within 24hrs.</p>
-        <a class="btn" href="mailto:hello_mechaiq@outlook.com?subject=MechAIQ%20Consultation">Book Consultation</a>
-      </section>
-    </main>
-
-    <footer>
-      <div>© 2025 MechAIQ</div>
-      <div>Designed by MechAIQ — Engineering Intelligence for Mechanical Systems</div>
-    </footer>
+  <div class="card">
+    <h3>Real-Time Monitoring</h3>
+    <p>Continuous machine vibration data acquisition and live operational health tracking.</p>
   </div>
 
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click',function(e){
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-      });
-    });
-  </script>
+  <div class="card">
+    <h3>AI Diagnostics</h3>
+    <p>Automatic detection of bearing faults, imbalance, misalignment, looseness, and gear anomalies with definite confidence levels.</p>
+  </div>
 
+  <div class="card">
+    <h3>Predictive Prognostics</h3>
+    <p>Remaining useful life estimation and failure forecasting for rotating equipment.</p>
+  </div>
+
+  <div class="card">
+    <h3>Cloud Dashboard</h3>
+    <p>Remote machine monitoring with secure analytics dashboards and health reports.</p>
+  </div>
+
+  <div class="card">
+    <h3>Custom Sensor Integration</h3>
+    <p>Plug-and-play deployment with vibration, acoustic, and process sensors.</p>
+  </div>
+
+  <div class="card">
+    <h3>Industrial Intelligence</h3>
+    <p>Data-driven maintenance planning to reduce downtime and optimize asset life.</p>
+  </div>
+
+</section>
+
+<section style="margin-top:36px;background:rgba(255,255,255,0.01);padding:18px;border-radius:12px;">
+  <h3>How it works</h3>
+  <ol>
+    <li>Sensor installation on target machinery</li>
+    <li>Live data collection and edge processing</li>
+    <li>AI-based fault diagnosis engine</li>
+    <li>Remaining useful life prediction</li>
+    <li>Actionable maintenance recommendations</li>
+  </ol>
+</section>
+<!-- The image "phm_process.png" should visually represent the workflow of data acquisition, AI diagnostics, and prognostics. It can be a simple flowchart or infographic that illustrates the steps from sensor data collection to maintenance insights. -->
+<section style="margin-top:28px;text-align:center;">
+  <h3 style="margin-bottom:18px;">PHM Workflow</h3>
+  <p style="color:var(--muted);max-width:800px;margin:0 auto 20px auto;line-height:1.6;">
+    Our predictive health monitoring workflow combines sensor data acquisition, AI-based diagnostics, and prognostics to generate actionable maintenance intelligence.
+  </p>
+
+  <img src="phm_process.png" 
+       alt="PHM workflow"
+       style="width:100%;max-width:950px;border-radius:14px;
+              box-shadow:0 8px 30px rgba(0,224,255,0.08);
+              border:1px solid rgba(255,255,255,0.05);">
+</section>
+
+<section style="margin-top:28px;">
+  <h3>Use Cases</h3>
+  <div class="services">
+    <div class="card">
+      <h3>Rotating Equipment</h3>
+      <p>Motors, pumps, compressors, driveshafts, engine cranks, gears, bearings.</p>
+    </div>
+    <div class="card">
+      <h3>Condition Monitoring</h3>
+      <p>Continuous asset health analytics for industrial plants.</p>
+    </div>
+    <div class="card">
+      <h3>Failure Prevention</h3>
+      <p>Early warning system to avoid catastrophic breakdowns.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="margin-top:28px;">
+  <h3>Contact</h3>
+  <p style="color:var(--muted)">Schedule a product walkthrough or discuss a pilot deployment.</p>
+  <p><strong>Email:</strong> hello_mechaiq@outlook.com</p>
+  <a class="btn" href="mailto:hello_mechaiq@outlook.com">Request Demo</a>
+</section>
+
+</main>
+
+<footer>
+  <div>© 2026 MechAIQ</div>
+  <div>AI Powered Industrial Machine Health Monitoring</div>
+</footer>
+
+</div>
+
+<!--Adding smooth scrolling for anchor links (for better UX when clicking "Book a Demo" or "Explore Platform")-->
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+</script>
 </body>
 </html>
-
-
-
-
